@@ -30,7 +30,7 @@ def openFile():
     text.insert(0.0,t)
 
 root = Tk()
-root.title("Text Editor")
+root.title("Edita")
 root.minsize(width=400, height=400)
 root.maxsize(width=600, height=600)
 
