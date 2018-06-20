@@ -80,6 +80,11 @@ def color():
     if color:
         text.config(background=color)
 
+def textColor():
+    (triple,color) = askcolor()
+    if color:
+        text.config(foreground=color)
+
 def copy():
     text.clipboard_clear()
     text.clipboard_append(text.selection_get())
@@ -118,7 +123,7 @@ insmenu.add_command(label="Line",command=insertLine)
 
 formatmenu = Menu(menu)
 menu.add_cascade(label="Format",menu=formatmenu)
-formatmenu.add_cascade(label="Color",command=color)
+formatmenu.add_cascade(label="Color",command=textColor)
 formatmenu.add_separator()
 formatmenu.add_radiobutton(label='Normal',command=normal)
 formatmenu.add_radiobutton(label='Bold',command=bold)
